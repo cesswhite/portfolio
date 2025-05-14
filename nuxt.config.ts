@@ -2,6 +2,13 @@
 export default defineNuxtConfig({
   app: {
     head: {
+      script: [
+        {
+          src: 'https://api.stage.codewithbeto.dev/script.js',
+          defer: true,
+          'data-website-id': '65c786c1-68c0-4156-a962-11a4c07ac40c'
+        }
+      ],
       meta: [
         {
           name: "viewport",
@@ -14,7 +21,7 @@ export default defineNuxtConfig({
       ]
     },
   },
-  css: ["~/assets/css/main.css"],
+  css: ["~/assets/css/main.css", "~/assets/css/noise.css"],
   devtools: { enabled: true },
   future: {
     compatibilityVersion: 4,

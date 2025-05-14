@@ -2,10 +2,12 @@
     <div class="flex flex-col items-center">
         <div class="flex flex-col items-center">
             <p class="text-sm font-family-inter text-dark-900 dark:text-dark-100">Céss White</p>
-            <p class="text-xs font-family-inter text-dark-900 dark:text-dark-100">UI/UX Developer & Designer based in
-                México</p>
-            <p class="text-xs font-family-inter text-dark-900 dark:text-dark-100">Specialised in websites & web apps,
-                focus on minimalism</p>
+            <p class="text-xs font-family-inter text-dark-900 dark:text-dark-100">
+                UI/UX Developer/Designer based in México.
+            </p>
+            <p class="text-xs font-family-inter text-dark-900 dark:text-dark-100">
+                Specialised in websites and web apps, focus on minimalism.
+            </p>
         </div>
         <div class="flex gap-2 items-center mt-4">
             <UButton to="https://ecostudios.dev/?ref=cesswhite" label="[My Studio]" target="_blank" variant="link"

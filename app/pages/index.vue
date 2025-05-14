@@ -1,8 +1,6 @@
 <template>
     <NuxtLayout name="default">
-        <div class="h-screen w-full flex items-center justify-center">
-            <AppInfo />
-        </div>
+        <AppInfo />
     </NuxtLayout>
 </template>
 
