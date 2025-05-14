@@ -14,7 +14,7 @@ export default defineNuxtConfig({
       ]
     },
   },
-  css: ["~/assets/css/global.css", "~/assets/css/main.css"],
+  css: ["~/assets/css/main.css"],
   devtools: { enabled: true },
   future: {
     compatibilityVersion: 4,
