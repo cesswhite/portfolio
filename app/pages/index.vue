@@ -1,6 +1,6 @@
 <template>
     <NuxtLayout name="default">
-        <AppInfo />
+        <Info />
     </NuxtLayout>
 </template>
 
