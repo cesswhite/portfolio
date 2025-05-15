@@ -6,7 +6,7 @@ export default defineNuxtConfig({
         {
           src: 'https://api.stage.codewithbeto.dev/script.js',
           defer: true,
-          'data-website-id': '65c786c1-68c0-4156-a962-11a4c07ac40c'
+          'data-website-id': 'a5a38b06-22c6-4e51-ba27-cce4f9f8b57f'
         }
       ],
       meta: [
