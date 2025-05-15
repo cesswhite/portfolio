@@ -21,7 +21,7 @@ export default defineNuxtConfig({
       ]
     },
   },
-  css: ["~/assets/css/main.css", "~/assets/css/noise.css"],
+  css: ["~/assets/css/main.css"],
   devtools: { enabled: true },
   future: {
     compatibilityVersion: 4,
