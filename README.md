@@ -1,6 +1,6 @@
-![v4.20_cover_image](https://github.com/user-attachments/assets/db3b68fb-4677-4326-96b5-8a24e92a91a4)
+![portfolio_cover_image](https://res.cloudinary.com/dpvsklksg/image/upload/ecov4/gh-portfolio.png)
 
-# Mnml Portfolio: Minimal, simple, direct, and to the point.
+# Clean, Modern, and Purposeful Design
 
 A modern, minimalist portfolio template built with Nuxt & Nuxt UI, designed for developers who value simplicity and performance. Perfect for showcasing your work with style.
 
