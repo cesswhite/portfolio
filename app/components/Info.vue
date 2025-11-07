@@ -20,8 +20,6 @@
                 variant="link" color="neutral" size="xs" class="font-family-inter p-0" />
             <UButton to="https://x.com/cesswhite_?ref=cesswhite" label="[X]" target="_blank" variant="link"
                 color="neutral" size="xs" class="font-family-inter p-0" />
-            <UButton to="https://www.raiz-app.com/u/ecostudios/?ref=cesswhite" label="[Raíz]" target="_blank"
-                variant="link" color="neutral" size="xs" class="font-family-inter p-0" />
             <UButton
                 to="mailto:acessloop@gmail.com?subject=Hello%20Céss%20White&body=Hello%20Céss,%20I%20am%20interested%20in%20your%20work.%20I%20would%20like%20to%20know%20more%20about%20your%20services.%20Thank%20you.%20Best%20regards.%20"
                 label="[...]" target="_blank" variant="link" color="neutral" size="xs" class="font-family-inter p-0" />
@@ -31,8 +29,6 @@
             <UButton to="https://codewithbeto.dev/?ref=cesswhite" label="[codewithbeto]" target="_blank" variant="link"
                 color="neutral" size="xs" class="font-family-inter p-0" />
             <UButton to="https://www.landinuxt.com/?ref=cesswhite" label="[landinuxt]" target="_blank" variant="link"
-                color="neutral" size="xs" class="font-family-inter p-0" />
-            <UButton to="https://www.raiz-app.com/?ref=cesswhite" label="[raíz]" target="_blank" variant="link"
                 color="neutral" size="xs" class="font-family-inter p-0" />
             <UButton to="https://www.vivvento.com/?ref=cesswhite" label="[vivvento]" target="_blank" variant="link"
                 color="neutral" size="xs" class="font-family-inter p-0" />
