@@ -13,53 +13,60 @@
     height: 200vh;
     background: transparent url("/noise-transparent.webp") repeat 0 0;
     background-repeat: repeat;
+    will-change: transform;
     animation: bg-animation 0.2s infinite;
     visibility: visible;
 }
 
 @keyframes bg-animation {
     0% {
-        transform: translate(0, 0);
+        transform: translate3d(0, 0, 0);
     }
 
     10% {
-        transform: translate(-5%, -5%);
+        transform: translate3d(-5%, -5%, 0);
     }
 
     20% {
-        transform: translate(-10%, 5%);
+        transform: translate3d(-10%, 5%, 0);
     }
 
     30% {
-        transform: translate(5%, -10%);
+        transform: translate3d(5%, -10%, 0);
     }
 
     40% {
-        transform: translate(-5%, 15%);
+        transform: translate3d(-5%, 15%, 0);
     }
 
     50% {
-        transform: translate(-10%, 5%);
+        transform: translate3d(-10%, 5%, 0);
     }
 
     60% {
-        transform: translate(15%, 0);
+        transform: translate3d(15%, 0, 0);
     }
 
     70% {
-        transform: translate(0, 10%);
+        transform: translate3d(0, 10%, 0);
     }
 
     80% {
-        transform: translate(-15%, 0);
+        transform: translate3d(-15%, 0, 0);
     }
 
     90% {
-        transform: translate(10%, 5%);
+        transform: translate3d(10%, 5%, 0);
     }
 
     100% {
-        transform: translate(5%, 0);
+        transform: translate3d(5%, 0, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .noise-bg {
+        animation: none;
     }
 }
 </style>

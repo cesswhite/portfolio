@@ -2,6 +2,7 @@
 export default defineNuxtConfig({
   app: {
     head: {
+      titleTemplate: '%s',
       script: [
         {
           src: 'https://api.stage.codewithbeto.dev/script.js',
@@ -11,14 +12,33 @@ export default defineNuxtConfig({
       ],
       meta: [
         {
-          name: "viewport",
-          content:
-            "width=device-width, initial-scale=1",
+          charset: 'utf-8',
         },
         {
-          charset: "utf-8",
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1',
         },
-      ]
+        {
+          name: 'author',
+          content: 'Céss White',
+        },
+        {
+          name: 'theme-color',
+          content: '#fafafa',
+          media: '(prefers-color-scheme: light)',
+        },
+        {
+          name: 'theme-color',
+          content: '#0a0a0a',
+          media: '(prefers-color-scheme: dark)',
+        },
+      ],
+      link: [
+        {
+          rel: 'apple-touch-icon',
+          href: '/icon.svg',
+        },
+      ],
     },
   },
   css: ["~/assets/css/main.css"],
