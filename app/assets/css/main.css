@@ -13,6 +13,21 @@
 }
 
 html,
+body,
+#__nuxt {
+  min-height: 100dvh;
+  background-color: var(--color-zinc-50);
+  color: var(--color-zinc-900);
+}
+
+html.dark,
+html.dark body,
+html.dark #__nuxt {
+  background-color: var(--color-zinc-950);
+  color: var(--color-zinc-100);
+}
+
+html,
 body {
   overscroll-behavior-y: none;
 }

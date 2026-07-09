@@ -1,5 +1,5 @@
 <template>
-    <main class="flex flex-col items-center">
+    <div class="flex flex-col items-center">
         <header class="flex flex-col items-center text-center">
             <h1 class="text-sm font-sans text-zinc-900 dark:text-zinc-100">Céss White</h1>
             <p class="text-xs font-sans text-zinc-900 dark:text-zinc-100">
@@ -37,5 +37,5 @@
                 <SiteLink href="https://v420.ecostudios.dev/?ref=cesswhite" label="[v4.20]" target="_blank" />
             </nav>
         </section>
-    </main>
+    </div>
 </template>
