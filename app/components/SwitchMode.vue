@@ -1,9 +1,9 @@
 <template>
   <button
     type="button"
-    class="relative z-100 inline-flex size-11 cursor-pointer items-center justify-center rounded-md text-zinc-900 transition-colors hover:bg-zinc-900/5 dark:text-zinc-100 dark:hover:bg-zinc-100/10"
+    data-theme-toggle
+    class="relative inline-flex size-11 cursor-pointer touch-manipulation items-center justify-center rounded-md text-zinc-900 transition-colors hover:bg-zinc-900/5 dark:text-zinc-100 dark:hover:bg-zinc-100/10"
     :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
-    @click="toggle"
   >
     <svg
       v-if="isDark"
@@ -47,5 +47,5 @@
 </template>
 
 <script setup lang="ts">
-const { isDark, toggle } = useTheme()
+const { isDark } = useTheme()
 </script>

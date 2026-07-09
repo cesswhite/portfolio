@@ -16,3 +16,11 @@ html,
 body {
   overscroll-behavior-y: none;
 }
+
+html.dark {
+  color-scheme: dark;
+}
+
+html.light {
+  color-scheme: light;
+}

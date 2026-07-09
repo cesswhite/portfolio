@@ -2,7 +2,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { siteConfig } from './app/config/site'
-import { themeInitScript } from './app/composables/useTheme'
+import { themeScript } from './app/composables/useTheme'
 
 export default defineNuxtConfig({
   runtimeConfig: {
@@ -17,7 +17,7 @@ export default defineNuxtConfig({
       script: [
         {
           key: 'theme-init',
-          innerHTML: themeInitScript,
+          innerHTML: themeScript,
           tagPosition: 'head',
         },
       ],

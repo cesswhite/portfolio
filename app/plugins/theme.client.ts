@@ -1,3 +1,3 @@
 export default defineNuxtPlugin(() => {
-  useTheme().initTheme()
+  useTheme().syncFromDom()
 })
