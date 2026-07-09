@@ -5,20 +5,29 @@
 </template>
 
 <script setup lang="ts">
-const siteUrl = 'https://cesswhite.com/'
-const title = 'Céss White | UI/UX Developer & Designer'
-const description =
-    'Céss White is a UI/UX developer and designer based in México, specialising in minimalist websites and web applications for brands that value clarity and craft.'
-const ogImage =
-    'https://res.cloudinary.com/dpvsklksg/image/upload/ecov4/cess-white-og-image.webp'
+import { siteConfig, siteUrl } from '~/config/site'
 
-const sameAs = [
-    'https://ecostudios.dev/',
-    'https://github.com/cesswhite/',
-    'https://www.youtube.com/channel/UCrLXsqIkrCsRawK2R3HEmbQ',
-    'https://www.linkedin.com/in/cesswhite/',
-    'https://x.com/cesswhite_',
-]
+const {
+    title,
+    description,
+    bio,
+    experience,
+    ogImage,
+    ogImageWidth,
+    ogImageHeight,
+    ogImageAlt,
+    twitterSite,
+    locale,
+    language,
+    sameAs,
+    knowsAbout,
+    worksFor,
+    services,
+    faqs,
+    name,
+    email,
+    lastUpdated,
+} = siteConfig
 
 useSeoMeta({
     title,
@@ -26,21 +35,26 @@ useSeoMeta({
     ogTitle: title,
     ogDescription: description,
     ogImage,
+    ogImageWidth,
+    ogImageHeight,
+    ogImageAlt,
     ogUrl: siteUrl,
-    ogType: 'website',
-    ogSiteName: 'Céss White',
-    ogLocale: 'en_US',
+    ogType: 'profile',
+    ogSiteName: name,
+    ogLocale: locale,
     twitterCard: 'summary_large_image',
     twitterTitle: title,
     twitterDescription: description,
     twitterImage: ogImage,
-    twitterCreator: '@cesswhite_',
-    robots: 'index, follow',
+    twitterImageAlt: ogImageAlt,
+    twitterSite,
+    twitterCreator: twitterSite,
+    robots: 'index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1',
 })
 
 useHead({
     htmlAttrs: {
-        lang: 'en',
+        lang: language,
     },
     link: [
         {
@@ -51,6 +65,24 @@ useHead({
             rel: 'icon',
             type: 'image/svg+xml',
             href: '/icon.svg',
+        },
+        {
+            rel: 'alternate',
+            type: 'text/plain',
+            href: '/llms.txt',
+            title: 'LLM context',
+        },
+        {
+            rel: 'alternate',
+            type: 'text/markdown',
+            href: '/about.md',
+            title: 'About (Markdown)',
+        },
+        {
+            rel: 'alternate',
+            type: 'text/markdown',
+            href: '/experience.md',
+            title: 'Experience (Markdown)',
         },
         {
             rel: 'me',
@@ -75,23 +107,60 @@ useHead({
                         '@type': 'WebSite',
                         '@id': `${siteUrl}#website`,
                         url: siteUrl,
-                        name: 'Céss White',
+                        name,
                         description,
-                        inLanguage: 'en',
+                        inLanguage: language,
+                        publisher: {
+                            '@id': `${siteUrl}#person`,
+                        },
+                    },
+                    {
+                        '@type': 'Organization',
+                        '@id': `${worksFor.url}#organization`,
+                        name: worksFor.name,
+                        url: worksFor.url,
+                        founder: {
+                            '@id': `${siteUrl}#person`,
+                        },
                     },
                     {
                         '@type': 'Person',
                         '@id': `${siteUrl}#person`,
-                        name: 'Céss White',
+                        name,
                         url: siteUrl,
+                        image: ogImage,
                         jobTitle: 'UI/UX Developer & Designer',
-                        description,
-                        email: 'acessloop@gmail.com',
+                        description: bio,
+                        email,
                         address: {
                             '@type': 'PostalAddress',
                             addressCountry: 'MX',
                         },
+                        knowsAbout,
+                        hasOccupation: {
+                            '@type': 'Occupation',
+                            name: 'UI/UX Developer & Frontend Engineer',
+                            occupationalCategory: 'Software Development',
+                            skills: experience.strengths.join(', '),
+                            description: experience.summary,
+                        },
+                        worksFor: {
+                            '@id': `${worksFor.url}#organization`,
+                        },
                         sameAs,
+                    },
+                    {
+                        '@type': 'ProfessionalService',
+                        '@id': `${siteUrl}#service`,
+                        name: `${name} — Enterprise UI/UX & Frontend`,
+                        url: siteUrl,
+                        description: experience.summary,
+                        provider: {
+                            '@id': `${siteUrl}#person`,
+                        },
+                        areaServed: 'Worldwide',
+                        serviceType: services,
+                        knowsAbout: experience.industries,
                     },
                     {
                         '@type': 'ProfilePage',
@@ -99,12 +168,28 @@ useHead({
                         url: siteUrl,
                         name: title,
                         description,
+                        datePublished: '2025-05-07',
+                        dateModified: lastUpdated,
                         mainEntity: {
                             '@id': `${siteUrl}#person`,
                         },
                         isPartOf: {
                             '@id': `${siteUrl}#website`,
                         },
+                    },
+                    {
+                        '@type': 'FAQPage',
+                        '@id': `${siteUrl}#faq`,
+                        url: `${siteUrl}faq.md`,
+                        dateModified: lastUpdated,
+                        mainEntity: faqs.map((faq) => ({
+                            '@type': 'Question',
+                            name: faq.question,
+                            acceptedAnswer: {
+                                '@type': 'Answer',
+                                text: faq.answer,
+                            },
+                        })),
                     },
                 ],
             }),

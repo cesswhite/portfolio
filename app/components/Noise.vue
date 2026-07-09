@@ -13,9 +13,8 @@
     height: 200vh;
     background: transparent url("/noise-transparent.webp") repeat 0 0;
     background-repeat: repeat;
-    will-change: transform;
-    animation: bg-animation 0.2s infinite;
-    visibility: visible;
+    animation: bg-animation 3s steps(10) infinite;
+    pointer-events: none;
 }
 
 @keyframes bg-animation {

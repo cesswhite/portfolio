@@ -1,0 +1,34 @@
+# Céss White
+
+> UI/UX developer and designer in México — enterprise experience in banking and cybersecurity, plus minimalist web applications.
+
+Céss White builds digital products with Vue.js and Nuxt. He has worked with global and national organizations in banking and cybersecurity, bringing deep expertise in component architecture, performance optimization, and frontend best practices.
+
+## Key pages
+
+- [Enterprise experience](https://www.cesswhite.com/experience.md): Banking, security, componentization, and performance expertise
+- [Full profile](https://www.cesswhite.com/about.md): Background, skills, projects, and contact
+- [FAQ](https://www.cesswhite.com/faq.md): Common questions including enterprise and banking experience
+- [Services](https://www.cesswhite.com/services.md): UI/UX design and frontend development offerings
+- [Homepage markdown](https://www.cesswhite.com/index.md): Homepage in markdown format
+- [Homepage](https://www.cesswhite.com/): Portfolio and links
+
+## Quick facts
+
+- **Role:** UI/UX Developer & Designer
+- **Location:** México (works worldwide)
+- **Industries:** Banking, Financial Services, Cybersecurity, Enterprise Software
+- **Expertise:** Component architecture, web performance, frontend best practices
+- **Studio:** [Eco Studios](https://ecostudios.dev/)
+- **Email:** acessloop@gmail.com
+- **GitHub:** https://github.com/cesswhite/
+- **LinkedIn:** https://www.linkedin.com/in/cesswhite/
+- **X:** https://x.com/cesswhite_
+
+## Optional
+
+- [Spotify](https://open.spotify.com/artist/2YtwRcqtcCzgpP38CzeflE): Music
+- [Apple Music](https://music.apple.com/mx/artist/c%C3%A9ss-white/6785069095): Music
+- [YouTube](https://www.youtube.com/channel/UCrLXsqIkrCsRawK2R3HEmbQ): Videos
+- [Code With Beto](https://codewithbeto.dev/): Developer education project
+- [Landinuxt](https://www.landinuxt.com/): Linux community

@@ -1,15 +1,18 @@
+import tailwindcss from '@tailwindcss/vite'
+
 // https://nuxt.com/docs/api/configuration/nuxt-config
+import { siteConfig } from './app/config/site'
+
 export default defineNuxtConfig({
+  runtimeConfig: {
+    public: {
+      siteUrl: siteConfig.url,
+    },
+  },
   app: {
     head: {
       titleTemplate: '%s',
-      script: [
-        {
-          src: 'https://api.stage.codewithbeto.dev/script.js',
-          defer: true,
-          'data-website-id': 'a5a38b06-22c6-4e51-ba27-cce4f9f8b57f'
-        }
-      ],
+      title: siteConfig.title,
       meta: [
         {
           charset: 'utf-8',
@@ -17,6 +20,10 @@ export default defineNuxtConfig({
         {
           name: 'viewport',
           content: 'width=device-width, initial-scale=1',
+        },
+        {
+          name: 'description',
+          content: siteConfig.description,
         },
         {
           name: 'author',
@@ -41,14 +48,30 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ["~/assets/css/main.css"],
-  devtools: { enabled: true },
+  css: ['~/assets/css/main.css'],
+  devtools: { enabled: process.env.NODE_ENV === 'development' },
   future: {
     compatibilityVersion: 4,
   },
   compatibilityDate: '2025-05-07',
-  modules: ['@nuxt/ui'],
+  modules: ['@nuxtjs/color-mode'],
+  colorMode: {
+    classSuffix: '',
+    preference: 'system',
+    fallback: 'light',
+  },
+  vite: {
+    plugins: [tailwindcss()],
+  },
+  nitro: {
+    prerender: {
+      routes: ['/'],
+    },
+  },
+  routeRules: {
+    '/': { prerender: true },
+  },
   typescript: {
-    typeCheck: true
-  }
+    typeCheck: process.env.NODE_ENV === 'development',
+  },
 })
