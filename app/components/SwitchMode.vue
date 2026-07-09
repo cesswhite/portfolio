@@ -2,11 +2,11 @@
   <button
     type="button"
     class="relative z-100 inline-flex size-11 cursor-pointer items-center justify-center rounded-md text-zinc-900 transition-colors hover:bg-zinc-900/5 dark:text-zinc-100 dark:hover:bg-zinc-100/10"
-    :aria-label="colorMode.value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
+    :aria-label="isDark ? 'Switch to light mode' : 'Switch to dark mode'"
     @click="toggle"
   >
     <svg
-      v-if="colorMode.value === 'dark'"
+      v-if="isDark"
       xmlns="http://www.w3.org/2000/svg"
       width="16"
       height="16"
@@ -47,10 +47,20 @@
 </template>
 
 <script setup lang="ts">
-const colorMode = useColorMode()
+interface ColorModeState {
+  preference: string
+  value: string
+  unknown: boolean
+  forced: boolean
+}
+
+const colorMode = useState<ColorModeState>('color-mode')
+
+const isDark = computed(() => colorMode.value?.value === 'dark')
 
 function toggle() {
-  const isDark = colorMode.value === 'dark'
-  colorMode.preference = isDark ? 'light' : 'dark'
+  if (!colorMode.value) return
+
+  colorMode.value.preference = isDark.value ? 'light' : 'dark'
 }
 </script>
