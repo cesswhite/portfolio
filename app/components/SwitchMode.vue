@@ -1,15 +1,15 @@
 <template>
   <button
     type="button"
-    class="font-sans text-xs text-zinc-900 dark:text-zinc-100 p-0 hover:underline underline-offset-2"
+    class="relative z-100 inline-flex size-11 cursor-pointer items-center justify-center rounded-md text-zinc-900 transition-colors hover:bg-zinc-900/5 dark:text-zinc-100 dark:hover:bg-zinc-100/10"
     :aria-label="colorMode.value === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'"
     @click="toggle"
   >
     <svg
       v-if="colorMode.value === 'dark'"
       xmlns="http://www.w3.org/2000/svg"
-      width="14"
-      height="14"
+      width="16"
+      height="16"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -31,8 +31,8 @@
     <svg
       v-else
       xmlns="http://www.w3.org/2000/svg"
-      width="14"
-      height="14"
+      width="16"
+      height="16"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -50,6 +50,7 @@
 const colorMode = useColorMode()
 
 function toggle() {
-  colorMode.preference = colorMode.value === 'dark' ? 'light' : 'dark'
+  const isDark = colorMode.value === 'dark'
+  colorMode.preference = isDark ? 'light' : 'dark'
 }
 </script>
