@@ -2,6 +2,7 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import { siteConfig } from './app/config/site'
+import { themeInitScript } from './app/composables/useTheme'
 
 export default defineNuxtConfig({
   runtimeConfig: {
@@ -13,6 +14,13 @@ export default defineNuxtConfig({
     head: {
       titleTemplate: '%s',
       title: siteConfig.title,
+      script: [
+        {
+          key: 'theme-init',
+          innerHTML: themeInitScript,
+          tagPosition: 'head',
+        },
+      ],
       meta: [
         {
           charset: 'utf-8',
@@ -54,12 +62,6 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
   compatibilityDate: '2025-05-07',
-  modules: ['@nuxtjs/color-mode'],
-  colorMode: {
-    classSuffix: '',
-    preference: 'system',
-    fallback: 'light',
-  },
   vite: {
     plugins: [tailwindcss()],
   },

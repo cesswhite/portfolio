@@ -9,7 +9,7 @@ await page.goto(url, { waitUntil: 'networkidle' })
 
 const readState = () => page.evaluate(() => ({
   htmlClass: document.documentElement.className,
-  storage: localStorage.getItem('nuxt-color-mode'),
+  storage: localStorage.getItem('theme'),
   ariaLabel: document.querySelector('button[aria-label*="mode"]')?.getAttribute('aria-label'),
   bg: getComputedStyle(document.querySelector('.min-h-dvh') || document.body).backgroundColor,
 }))
@@ -22,11 +22,11 @@ await page.click('button[aria-label*="mode"]')
 await page.waitForTimeout(500)
 const afterSecond = await readState()
 
-const passed = before.htmlClass !== afterFirst.htmlClass
-  && afterFirst.htmlClass === 'dark'
+const passed = before.htmlClass.includes('light')
+  && afterFirst.htmlClass.includes('dark')
   && afterFirst.ariaLabel === 'Switch to light mode'
   && afterFirst.storage === 'dark'
-  && afterSecond.htmlClass === 'light'
+  && afterSecond.htmlClass.includes('light')
   && afterSecond.ariaLabel === 'Switch to dark mode'
   && afterSecond.storage === 'light'
 

@@ -47,20 +47,5 @@
 </template>
 
 <script setup lang="ts">
-interface ColorModeState {
-  preference: string
-  value: string
-  unknown: boolean
-  forced: boolean
-}
-
-const colorMode = useState<ColorModeState>('color-mode')
-
-const isDark = computed(() => colorMode.value?.value === 'dark')
-
-function toggle() {
-  if (!colorMode.value) return
-
-  colorMode.value.preference = isDark.value ? 'light' : 'dark'
-}
+const { isDark, toggle } = useTheme()
 </script>
