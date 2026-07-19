@@ -1,7 +1,7 @@
 <template>
     <div class="flex flex-col items-start sm:items-center w-full">
         <header class="flex flex-col items-start sm:items-center text-left sm:text-center">
-            <h1 class="text-sm font-sans text-zinc-900 dark:text-zinc-100">Céss White</h1>
+            <h1 class="text-sm font-sans font-bold text-zinc-900 dark:text-zinc-100">Céss White</h1>
             <p class="text-xs font-sans text-zinc-900 dark:text-zinc-100">
                 UI/UX Developer/Designer based in México.
             </p>
@@ -27,7 +27,7 @@
         </nav>
         <section aria-labelledby="working-on-heading" class="flex flex-col items-start sm:items-center">
             <h2 id="working-on-heading"
-                class="text-xs font-sans text-zinc-900 dark:text-zinc-100 mt-4 font-normal">
+                class="text-xs font-sans text-zinc-900 dark:text-zinc-100 mt-4 font-bold">
                 Working on
             </h2>
             <nav aria-label="Current projects" class="flex flex-col sm:flex-row gap-2 items-start sm:items-center mt-2">
