@@ -35,6 +35,7 @@
                 <SiteLink href="https://www.landinuxt.com/?ref=cesswhite" label="[landinuxt]" target="_blank" />
                 <SiteLink href="https://www.ecosdepachuca.com/?ref=cesswhite" label="[ecos de pachuca]" target="_blank" />
                 <SiteLink href="https://v420.ecostudios.dev/?ref=cesswhite" label="[v4.20]" target="_blank" />
+                <SiteLink href="https://vinyl.ecostudios.dev/?ref=cesswhite" label="[vinyl]" target="_blank" />
             </nav>
         </section>
     </div>
