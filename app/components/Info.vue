@@ -37,6 +37,8 @@
                     target="_blank" />
                 <SiteLink href="https://v420.ecostudios.dev/?ref=cesswhite" label="[v4.20]" target="_blank" />
                 <SiteLink href="https://vinyl.ecostudios.dev/?ref=cesswhite" label="[vinyl]" target="_blank" />
+                <SiteLink href="https://autodj.ecostudios.dev/?ref=cesswhite" label="[autodj]" target="_blank" />
+
             </nav>
         </section>
     </div>
