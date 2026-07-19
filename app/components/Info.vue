@@ -9,9 +9,10 @@
                 Specialised in websites and web apps, focus on minimalism.
             </p>
         </header>
-        <nav aria-label="Social and contact links" class="flex flex-col sm:flex-row gap-2 items-start sm:items-center mt-4">
+        <nav aria-label="Social and contact links"
+            class="flex flex-col sm:flex-row gap-2 items-start sm:items-center mt-4">
             <SiteLink href="https://ecostudios.dev/?ref=cesswhite" label="[My Studio]" target="_blank" />
-            <SiteLink href="https://youtu.be/jvLL0v-dlx0?ref=cesswhite" label="[My Music]" target="_blank" />
+            <SiteLink href="https://youtu.be/jkPeNnXms7c?ref=cesswhite" label="[My Music]" target="_blank" />
             <SiteLink href="https://open.spotify.com/artist/2YtwRcqtcCzgpP38CzeflE?ref=cesswhite" label="[Spotify]"
                 target="_blank" />
             <SiteLink href="https://music.apple.com/mx/artist/c%C3%A9ss-white/6785069095?ref=cesswhite"
@@ -26,14 +27,14 @@
                 label="[...]" />
         </nav>
         <section aria-labelledby="working-on-heading" class="flex flex-col items-start sm:items-center">
-            <h2 id="working-on-heading"
-                class="text-xs font-sans text-zinc-900 dark:text-zinc-100 mt-4 font-bold">
+            <h2 id="working-on-heading" class="text-xs font-sans text-zinc-900 dark:text-zinc-100 mt-4 font-bold">
                 Working on
             </h2>
             <nav aria-label="Current projects" class="flex flex-col sm:flex-row gap-2 items-start sm:items-center mt-2">
                 <SiteLink href="https://codewithbeto.dev/?ref=cesswhite" label="[codewithbeto]" target="_blank" />
                 <SiteLink href="https://www.landinuxt.com/?ref=cesswhite" label="[landinuxt]" target="_blank" />
-                <SiteLink href="https://www.ecosdepachuca.com/?ref=cesswhite" label="[ecos de pachuca]" target="_blank" />
+                <SiteLink href="https://www.ecosdepachuca.com/?ref=cesswhite" label="[ecos de pachuca]"
+                    target="_blank" />
                 <SiteLink href="https://v420.ecostudios.dev/?ref=cesswhite" label="[v4.20]" target="_blank" />
                 <SiteLink href="https://vinyl.ecostudios.dev/?ref=cesswhite" label="[vinyl]" target="_blank" />
             </nav>
